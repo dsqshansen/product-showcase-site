@@ -1,6 +1,6 @@
 import { products } from "./data/products.js";
 
-const container = document.getElementById("products-list");
+const container = document.getElementById("product-list");
 
 function renderProducts(list) {
   container.innerHTML = "";
