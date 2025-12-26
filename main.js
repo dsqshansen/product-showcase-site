@@ -17,11 +17,14 @@ function renderProducts(region) {
   filtered.forEach(product => {
     const div = document.createElement("div");
     div.className = "product";
-    div.innerHTML = `
-      <img src="${product.image}" alt="${product.name}">
-      <h3>${product.name}</h3>
-      <p>${product.description}</p>
-    `;
+div.innerHTML = `
+  <div class="status">
+    ${product.available ? "ON" : "OFF"}
+  </div>
+  <img src="${product.image}" alt="${product.name}">
+  <h3>${product.name}</h3>
+  <p>${product.description}</p>
+`;
     container.appendChild(div);
   });
 }
