@@ -22,10 +22,6 @@ function renderProducts(region) {
   });
 }
 
-renderProducts(products);
-
-
-
 
 const defaultBtn = document.querySelector('.filters button[data-region="all"]');
 defaultBtn.classList.add("active");
