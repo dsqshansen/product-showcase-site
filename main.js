@@ -28,4 +28,16 @@ defaultBtn.classList.add("active");
 
 renderProducts('all');
 
+document.querySelectorAll(".filter-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    renderProducts(btn.dataset.region);
+
+    document.querySelectorAll(".filter-btn").forEach(b =>
+      b.classList.remove("active")
+    );
+    btn.classList.add("active");
+  });
+});
+
+
 
