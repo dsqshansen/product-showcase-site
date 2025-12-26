@@ -4,7 +4,8 @@ export const products = [
     name: "产品 A",
     description: "这是一个示例产品描述",
     image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
-    region: "richmond"
+    region: "richmond",
+    available: true
   },
   {
     id: "b",
