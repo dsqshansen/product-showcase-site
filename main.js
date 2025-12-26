@@ -20,18 +20,19 @@ renderProducts(products);
 
 
 // 按钮筛选
-document.querySelectorAll(".filters button").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const region = btn.dataset.region;
+document.querySelectorAll('.filters button').forEach(button => {
+  button.addEventListener('click', () => {
 
-    if (region === "all") {
-      renderProducts(products);
-    } else {
-      const filtered = products.filter(
-        (p) => p.region === region
-      );
-      renderProducts(filtered);
-    }
+    // 清空所有按钮的高亮
+    document.querySelectorAll('.filters button')
+      .forEach(b => b.classList.remove('active'));
+
+    // 当前点击的按钮变黑
+    button.classList.add('active');
+
+    // 执行原有筛选
+    const region = button.dataset.region;
+    renderProducts(region);
   });
 });
 
