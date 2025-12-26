@@ -2,9 +2,15 @@ import { products } from "./data/products.js";
 
 const container = document.getElementById("product-list");
 
-function renderProducts(list) {
+function renderProducts(region) {
   container.innerHTML = "";
-  list.forEach((product) => {
+
+  const filtered =
+    region === 'all'
+      ? products
+      : products.filter(p => p.region === region);
+
+  filtered.forEach(product => {
     const div = document.createElement("div");
     div.className = "product";
     div.innerHTML = `
