@@ -17,3 +17,20 @@ function renderProducts(list) {
 }
 
 renderProducts(products);
+
+
+// 按钮筛选
+document.querySelectorAll(".filters button").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const region = btn.dataset.region;
+
+    if (region === "all") {
+      renderProducts(products);
+    } else {
+      const filtered = products.filter(
+        (p) => p.region === region
+      );
+      renderProducts(filtered);
+    }
+  });
+});
