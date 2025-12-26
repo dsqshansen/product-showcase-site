@@ -39,3 +39,6 @@ document.querySelectorAll('.filters button').forEach(button => {
 const defaultBtn = document.querySelector('.filters button[data-region="all"]');
 defaultBtn.classList.add("active");
 
+renderProducts('all');
+
+
