@@ -27,19 +27,20 @@ function renderProducts(region) {
 }
 
 /**
- * 按钮高亮
+ * 设置按钮高亮
  */
 function setActiveButton(region) {
   buttons.forEach(btn => {
-    btn.classList.toggle(
-      "active",
-      btn.dataset.region === region
-    );
+    if (btn.dataset.region === region) {
+      btn.classList.add("active");
+    } else {
+      btn.classList.remove("active");
+    }
   });
 }
 
 /**
- * 绑定按钮事件
+ * 绑定按钮点击事件
  */
 buttons.forEach(btn => {
   btn.addEventListener("click", () => {
