@@ -34,3 +34,7 @@ document.querySelectorAll(".filters button").forEach((btn) => {
     }
   });
 });
+
+const defaultBtn = document.querySelector('.filters button[data-region="all"]');
+defaultBtn.classList.add("active");
+
