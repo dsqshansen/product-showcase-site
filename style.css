@@ -85,4 +85,21 @@ header p {
       font-size: 13px;
       color: #999;
     }
+
+/* 强制放大手机端文字 */
+header h1 {
+  font-size: 24px !important;
+}
+
+header p {
+  font-size: 16px !important;
+}
+
+.product h2 {
+  font-size: 20px !important;
+}
+
+.product p {
+  font-size: 16px !important;
+}
   
