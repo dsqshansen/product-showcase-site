@@ -28,6 +28,7 @@ header {
   color: #fff;
   padding: 16px;
   text-align: center;
+  font-size: 24px;
 }
 
 header h1 {
@@ -39,6 +40,7 @@ header p {
   font-size: 14px;
   margin-top: 4px;
   opacity: 0.8;
+  font-size: 16px;
 }
     main {
       max-width: 1000px;
@@ -70,11 +72,11 @@ header p {
 
     .product h3 {
       margin: 10px 0 6px;
-      font-size: 18px;
+      font-size: 20px;
     }
 
     .product p {
-      font-size: 14px;
+      font-size: 15px;
       color: #666;
     }
 
