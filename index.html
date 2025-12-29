@@ -1,54 +1,51 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <title>Brand Name</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./style.css">
+  <title>Brand Name</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-
+  <!-- 主样式 -->
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
+  <!-- 顶部导航 -->
+  <header class="site-header">
+    <div class="logo">Brand</div>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Dim Sum</h1>
-    <p>Fresh • Handmade • Everyday</p>
-  </div>
-</section>
-  
-  <div class="page">
+    <nav class="main-nav">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
 
-<header class="topbar">
-  <div class="topbar-inner">
-    <div class="logo">Brand Name</div>
-    <button class="menu-btn">☰</button>
-  </div>
-</header>
+    <button class="menu-toggle" aria-label="Open Menu">
+      ☰
+    </button>
+  </header>
 
+  <!-- Hero 区（摄影风核心） -->
   <main>
-<section class="filters">
-  <button class="filter-btn active" data-region="all">全部</button>
-  <button class="filter-btn" data-region="richmond">Richmond（列治文）</button>
-  <button class="filter-btn" data-region="burnaby">Burnaby（本拿比）</button>
-</section>
-    
-<section class="products">
-  <div id="product-list"></div>
-</section>
-    
+    <section class="hero">
+      <div class="hero-overlay">
+        <h1>Handcrafted. Simple. Real.</h1>
+        <p>Inspired by tradition, made for today.</p>
+      </div>
+    </section>
+
+    <!-- 预留：产品区域 -->
+    <section class="content">
+      <h2>Featured Products</h2>
+
+      <div id="product-list">
+        <!-- JS 渲染产品 -->
+      </div>
+    </section>
   </main>
 
-  <footer>
-    © 2025 Brand Name. All rights reserved.
-  </footer>
-  
-
-<script type="module" src="./main.js"></script>
-</div>
-
+  <!-- JS -->
+  <script src="./js/main.js" type="module"></script>
 </body>
 </html>
