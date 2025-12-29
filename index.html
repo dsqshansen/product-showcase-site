@@ -1,51 +1,71 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brand Name</title>
+  <title>Brand</title>
 
-  <!-- 主样式 -->
-  <link rel="stylesheet" href="./css/style.css" />
+  <!-- Base / Reset -->
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+      background: #000;
+      color: #fff;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  </style>
+
+  <!-- Menu styles -->
+  <link rel="stylesheet" href="./css/menu.css">
 </head>
 
 <body>
-  <!-- 顶部导航 -->
+
+  <!-- ===== Header ===== -->
   <header class="site-header">
-    <div class="logo">Brand</div>
-
-    <nav class="main-nav">
-      <a href="#">Home</a>
-      <a href="#">Products</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-
-    <button class="menu-toggle" aria-label="Open Menu">
-      ☰
-    </button>
+    <div class="header-inner">
+      <div class="logo">Brand</div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
+        ☰
+      </button>
+    </div>
   </header>
 
-  <!-- Hero 区（摄影风核心） -->
-  <main>
-    <section class="hero">
-      <div class="hero-overlay">
-        <h1>Handcrafted. Simple. Real.</h1>
-        <p>Inspired by tradition, made for today.</p>
-      </div>
-    </section>
+  <!-- ===== Mobile Menu ===== -->
+  <nav class="mobile-menu" id="mobileMenu">
+    <button class="menu-close" id="menuClose">×</button>
+    <ul class="menu-list">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Story</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- 预留：产品区域 -->
-    <section class="content">
-      <h2>Featured Products</h2>
-
-      <div id="product-list">
-        <!-- JS 渲染产品 -->
-      </div>
+  <!-- ===== Main Content ===== -->
+  <main style="padding-top: 80px;">
+    <section style="padding: 120px 24px;">
+      <h1 style="font-size: 42px; letter-spacing: 0.1em; margin-bottom: 24px;">
+        Handcrafted.<br>Simple.<br>Real.
+      </h1>
+      <p style="max-width: 420px; line-height: 1.6; opacity: 0.8;">
+        Minimal structure demo page.  
+        Menu is decoupled and production-safe.
+      </p>
     </section>
   </main>
 
-  <!-- JS -->
-  <script src="./js/main.js" type="module"></script>
+  <!-- Menu logic -->
+  <script src="./js/menu.js"></script>
+
 </body>
 </html>
