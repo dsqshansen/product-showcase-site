@@ -5,12 +5,22 @@
   border: 2px solid #ccc;
   opacity: 1;
 }
-body {
-  margin: 0;
-  font-family: ...;
-  background: #fffaf5;
-  color: #333;
+
+
+.filters button.active {
+  background: #000;   /* 选中：黑底 */
+  color: #fff;        /* 白字 */
+  border-color: #000;
 }
+    
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
+        "Helvetica Neue", Arial, sans-serif;
+      background: #fffaf5;
+      color: #333;
+    }
+
 
 header {
   background: #111;
@@ -29,23 +39,6 @@ header p {
   margin-top: 4px;
   opacity: 0.8;
 }
-
-.filters button.active {
-  background: #000;   /* 选中：黑底 */
-  color: #fff;        /* 白字 */
-  border-color: #000;
-}
-    
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
-        "Helvetica Neue", Arial, sans-serif;
-      background: #fffaf5;
-      color: #333;
-    }
-
-
-
     main {
       max-width: 1000px;
       margin: 40px auto;
