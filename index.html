@@ -5,48 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Brand</title>
 
-  <!-- 主样式 -->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- Hero 专用样式（新） -->
-  <link rel="stylesheet" href="css/hero.css">
-
-  <!-- 字体（接近参考网站风格） -->
+  <!-- Google Font（接近参考站风格） -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="./styles/style.css" />
 </head>
 <body>
 
-  <!-- Header / Menu（保持你现在的结构逻辑） -->
-  <header class="site-header">
-    <div class="logo">Brand</div>
-    <button class="menu-toggle" aria-label="Menu">☰</button>
+  <!-- Header / Menu -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">Brand</div>
+      <button class="menu-toggle" aria-label="Menu">☰</button>
+    </div>
   </header>
 
   <!-- Hero -->
   <section class="hero">
+    <img src="/hero.png" alt="Hero image" class="hero-bg" />
     <div class="hero-overlay"></div>
-
     <div class="hero-content">
       <h1>
-        Handcrafted.<br>
-        Simple.<br>
+        Handcrafted.<br/>
+        Simple.<br/>
         Real.
       </h1>
-      <p>
-        Inspired by tradition, made for today.
-      </p>
+      <p>Inspired by tradition, made for today.</p>
     </div>
   </section>
 
-  <!-- 后续内容占位 -->
-  <main>
-    <section class="section">
-      <h2>Featured Products</h2>
-    </section>
-  </main>
+  <!-- Placeholder next section -->
+  <section class="section">
+    <h2>Featured Products</h2>
+  </section>
 
-  <!-- 你原有的 menu / main.js 继续用 -->
-  <script src="js/main.js"></script>
+  <script src="./scripts/menu.js"></script>
 </body>
 </html>
