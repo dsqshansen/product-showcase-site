@@ -2,70 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Brand</title>
 
-  <!-- Base / Reset -->
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Helvetica, Arial, sans-serif;
-      background: #000;
-      color: #fff;
-    }
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-  </style>
+  <!-- 主样式 -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Hero 专用样式（新） -->
+  <link rel="stylesheet" href="css/hero.css">
 
-  <!-- Menu styles -->
-  <link rel="stylesheet" href="./css/menu.css">
+  <!-- 字体（接近参考网站风格） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-  <!-- ===== Header ===== -->
+  <!-- Header / Menu（保持你现在的结构逻辑） -->
   <header class="site-header">
-    <div class="header-inner">
-      <div class="logo">Brand</div>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
-        ☰
-      </button>
-    </div>
+    <div class="logo">Brand</div>
+    <button class="menu-toggle" aria-label="Menu">☰</button>
   </header>
 
-  <!-- ===== Mobile Menu ===== -->
-  <nav class="mobile-menu" id="mobileMenu">
-    <button class="menu-close" id="menuClose">×</button>
-    <ul class="menu-list">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Products</a></li>
-      <li><a href="#">Story</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
 
-  <!-- ===== Main Content ===== -->
-  <main style="padding-top: 80px;">
-    <section style="padding: 120px 24px;">
-      <h1 style="font-size: 42px; letter-spacing: 0.1em; margin-bottom: 24px;">
-        Handcrafted.<br>Simple.<br>Real.
+    <div class="hero-content">
+      <h1>
+        Handcrafted.<br>
+        Simple.<br>
+        Real.
       </h1>
-      <p style="max-width: 420px; line-height: 1.6; opacity: 0.8;">
-        Minimal structure demo page.  
-        Menu is decoupled and production-safe.
+      <p>
+        Inspired by tradition, made for today.
       </p>
+    </div>
+  </section>
+
+  <!-- 后续内容占位 -->
+  <main>
+    <section class="section">
+      <h2>Featured Products</h2>
     </section>
   </main>
 
-  <!-- Menu logic -->
-  <script src="./js/menu.js"></script>
-
+  <!-- 你原有的 menu / main.js 继续用 -->
+  <script src="js/main.js"></script>
 </body>
 </html>
