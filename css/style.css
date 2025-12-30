@@ -46,7 +46,13 @@ html, body {
   align-items: center;
   justify-content: center;
 }
-
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  margin: 4px 0;
+}
 .menu-icon {
   width: 32px;
   height: 32px;
