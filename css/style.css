@@ -82,7 +82,7 @@ html, body {
   padding-top: 60px;
   background:
   linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-  url("/public/hero.png") center / cover no-repeat;
+  url("/hero.png") center / cover no-repeat;
   display: flex;
   align-items: center;
   padding-left: 24px;
