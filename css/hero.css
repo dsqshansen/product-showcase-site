@@ -1,0 +1,48 @@
+/* Hero 大图区域 */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("/images/hero.jpg"); /* 换成你的图片 */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+/* 暗色遮罩（高级感关键） */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* 内容 */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 24px;
+  max-width: 680px;
+}
+
+.hero-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* 移动端优化 */
+@media (min-width: 768px) {
+  .hero-content h1 {
+    font-size: 64px;
+  }
+}
