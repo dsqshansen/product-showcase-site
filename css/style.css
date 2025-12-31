@@ -1,4 +1,4 @@
-/* ===== Reset ===== */
+ /* ===== Reset ===== */
 * {
   margin: 0;
   padding: 0;
@@ -17,148 +17,59 @@ html, body {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 480px;
-  background: rgba(0,0,0,0.85);
+  height: 160px;
+  background: rgba(0, 0, 0, 0.9);
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   padding-left: clamp(24px, 6vw, 80px);
   padding-right: clamp(24px, 6vw, 80px);
-  z-index: 1000;
+
+  z-index: 3000;
 }
 
 .logo {
-  font-size: 5.1rem;
-  font-weight: 1200;
+  font-size: 3.2rem;
+  font-weight: 800;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
 
+/* ===== Menu Toggle (Hamburger) ===== */
 .menu-toggle {
   background: none;
   border: none;
-  padding: 0;
   cursor: pointer;
 
-  width: 44px;
-  height: 44px;
+  width: 64px;
+  height: 64px;
 
   display: flex;
-  flex-direction: column; 
   align-items: center;
   justify-content: center;
+
+  z-index: 4000;
 }
-.menu-toggle span {
-  display: block;
-  width: 128px;
-  height: 30px;
-  background: #fff;
-  margin: 14px 0;
-}
-.menu-icon {
-  width: 100px;
-  height: 100px;
+
+.menu-toggle svg {
+  width: 56px;
+  height: 56px;
+  fill: #fff;
 }
 
 /* ===== Mobile Menu Overlay ===== */
-.site-nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-
-  width: 100vw;
-  height: 100vh;
-
-  background: rgba(0, 0, 0, 0.95);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transform: translateX(100%);
-  transition: transform 0.4s ease;
-
-  z-index: 999;
-}
-
-.site-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-.site-nav li {
-  margin: 20px 0;
-}
-
-.site-nav a {
-  font-size: 2rem;
-  color: #fff;
-  text-decoration: none;
-  letter-spacing: 2px;
-}
-
-.site-nav.open {
-  transform: translateX(0);
-}
-
-/* ===== Hero ===== */
-.hero {
-  min-height: 100vh;
-  padding-top: 60px;
-  background:
-  linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-  url("../hero.png") center / cover no-repeat;
-  display: flex;
-  align-items: center;
-  padding-left: 24px;
-}
-
-.hero-content {
-  max-width: 600px;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 500;
-  line-height: 1.15;
-  margin-bottom: 16px;
-}
-
-.hero p {
-  font-size: 1rem;
-  color: rgba(255,255,255,0.75);
-}
-
-/* ===== Section ===== */
-.section {
-  padding: 80px 24px;
-  background: #fff;
-  color: #000;
-}
-
-.section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 12px;
-}
-
-/* ===== Footer ===== */
-.site-footer {
-  background: #000;
-  color: rgba(255,255,255,0.6);
-  text-align: center;
-  padding: 24px;
-  font-size: 0.8rem;
-}
-
 .menu-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+
+  background: rgba(0, 0, 0, 0.95);
+
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.35s ease;
+
   z-index: 2000;
 }
 
@@ -167,23 +78,14 @@ html, body {
   pointer-events: auto;
 }
 
-
-.menu-overlay.open .slide-menu {
-  transform: translateX(0);
-}
-
+/* ===== Slide Menu Content ===== */
 .slide-menu {
   position: absolute;
-  left: 32px;
-  bottom: 80px;
-
-  background: none;
+  left: clamp(24px, 8vw, 96px);
+  bottom: clamp(48px, 10vh, 120px);
 
   display: flex;
   flex-direction: column;
-
-  transform: none;
-  transition: none;
 }
 
 .slide-menu ul {
@@ -191,14 +93,14 @@ html, body {
 }
 
 .slide-menu li {
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 }
 
 .slide-menu a {
-  font-size: 2.2rem;
+  font-size: 2.6rem;
   font-weight: 500;
   letter-spacing: 1px;
-  color: white;
+  color: #fff;
   text-decoration: none;
   opacity: 0.85;
   transition: opacity 0.2s ease;
@@ -208,73 +110,78 @@ html, body {
   opacity: 1;
 }
 
-
 /* ===== Close (X) Button ===== */
 .menu-close {
   position: absolute;
   top: 32px;
-  right: 24px;
+  right: 32px;
 
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
+
+  background: none;
+  border: none;
+  cursor: pointer;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  z-index: 1001;
 }
 
-.menu-close img {
-  width: 80px;
-  height: 80px;
-  display: block;
-  object-fit: contain;
+.menu-close svg {
+  width: 48px;
+  height: 48px;
+  stroke: #fff;
+  stroke-width: 3;
 }
 
-.menu-toggle {
-  position: relative;
-  z-index: 9999;
-  pointer-events: auto;
+/* ===== Hero ===== */
+.hero {
+  min-height: 100vh;
+  padding-top: 160px;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("./hero.png") center / cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  padding-left: clamp(24px, 6vw, 80px);
 }
 
-
-.menu-panel {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 80%;
-  max-width: 360px;
-  height: 100vh;
-  background: #111; /* 实体黑色 */
+.hero-content {
+  max-width: 640px;
 }
 
-.menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-
-  background: rgba(0, 0, 0, 0.75);
-
-  z-index: 9999;
-
-  display: none;
+.hero h1 {
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 20px;
 }
 
-.menu-overlay.open {
-  display: block;
+.hero p {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.75);
 }
 
-/*
-.close-icon {
-  width: 128px;
-  height: 128px;
-}*/
+/* ===== Section ===== */
+.section {
+  padding: 100px 24px;
+  background: #fff;
+  color: #000;
+}
 
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
 
+/* ===== Footer ===== */
+.site-footer {
+  background: #000;
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 32px;
+  font-size: 0.85rem;
+}
