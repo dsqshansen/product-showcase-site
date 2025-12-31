@@ -164,7 +164,7 @@ html, body {
 
 .menu-overlay.open {
   opacity: 0;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 /*
