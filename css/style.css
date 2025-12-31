@@ -136,3 +136,59 @@ html, body {
   padding: 24px;
   font-size: 0.8rem;
 }
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  z-index: 2000;
+}
+
+.slide-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(80vw, 420px);
+  height: 100%;
+  background: #000;
+  transform: translateX(100%);
+  transition: transform 0.45s ease;
+  display: flex;
+  align-items: center;
+  padding-left: 48px;
+}
+
+.slide-menu ul {
+  list-style: none;
+}
+
+.slide-menu li {
+  margin-bottom: 32px;
+}
+
+.slide-menu a {
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: white;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.slide-menu a:hover {
+  opacity: 1;
+}
+
+.menu-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu-overlay.open .slide-menu {
+  transform: translateX(0);
+}
+
