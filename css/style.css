@@ -242,17 +242,6 @@ html, body {
   pointer-events: auto;
 }
 
-.menu-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0); /* 半透明遮罩 */
-  z-index: 999;
-  display: none;
-}
-
-.menu-overlay.open {
-  display: block;
-}
 
 .menu-panel {
   position: absolute;
