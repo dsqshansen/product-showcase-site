@@ -162,6 +162,15 @@ html, body {
   z-index: 2000;
 }
 
+.menu-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu-overlay.open .slide-menu {
+  transform: translateX(0);
+}
+
 .slide-menu {
   position: absolute;
   top: 0;
@@ -198,14 +207,7 @@ html, body {
   opacity: 1;
 }
 
-.menu-overlay.open {
-  opacity: 1;
-  pointer-events: auto;
-}
 
-.menu-overlay.open .slide-menu {
-  transform: translateX(0);
-}
 /* ===== Close (X) Button ===== */
 .menu-close {
   position: absolute;
