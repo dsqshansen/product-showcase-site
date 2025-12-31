@@ -167,10 +167,10 @@ html, body {
   pointer-events: auto;
 }
 
-/*
+
 .menu-overlay.open .slide-menu {
   transform: translateX(0);
-}*/
+}
 
 .slide-menu {
   position: absolute;
