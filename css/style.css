@@ -163,7 +163,7 @@ html, body {
 }
 
 .menu-overlay.open {
-  opacity: 0;
+  opacity: 1;
   pointer-events: auto;
 }
 
