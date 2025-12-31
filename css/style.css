@@ -227,9 +227,10 @@ html, body {
 }
 
 .menu-close img {
-  width: 32px;
-  height: 32px;
+  width: 132px;
+  height: 132px;
   display: block;
+  object-fit: contain;
 }
 
 /*
