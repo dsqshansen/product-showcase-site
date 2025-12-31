@@ -236,6 +236,12 @@ html, body {
   object-fit: contain;
 }
 
+.menu-toggle {
+  position: relative;
+  z-index: 9999;
+  pointer-events: auto;
+}
+
 /*
 .close-icon {
   width: 128px;
