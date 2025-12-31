@@ -206,21 +206,36 @@ html, body {
 .menu-overlay.open .slide-menu {
   transform: translateX(0);
 }
-/* ===== Close Button ===== */
+/* ===== Close (X) Button ===== */
 .menu-close {
   position: absolute;
-  top: 24px;
+  top: 32px;
   right: 24px;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
-  z-index: 101;
+  z-index: 1001;
 }
 
+.menu-close img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+/*
 .close-icon {
   width: 128px;
   height: 128px;
-}
+}*/
 
 
