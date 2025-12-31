@@ -63,14 +63,19 @@
 
   <!-- ===== Script ===== -->
   <script>
-    const toggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector(".site-nav");
+  const menuBtn = document.querySelector('.menu-toggle');
+  const overlay = document.getElementById('menuOverlay');
 
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("open");
-      toggle.classList.toggle("open");
-    });
-  </script>
+  menuBtn.addEventListener('click', () => {
+    overlay.classList.toggle('open');
+  });
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      overlay.classList.remove('open');
+    }
+  });
+</script>
 
 </body>
 </html>
