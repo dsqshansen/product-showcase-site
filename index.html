@@ -60,12 +60,17 @@
   </footer>
 
   <!-- ===== Script ===== -->
-  <script>
+<script>
   const menuBtn = document.querySelector('.menu-toggle');
   const overlay = document.getElementById('menuOverlay');
+  const closeBtn = document.getElementById('menuClose');
 
   menuBtn.addEventListener('click', () => {
-    overlay.classList.toggle('open');
+    overlay.classList.add('open');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    overlay.classList.remove('open');
   });
 
   overlay.addEventListener('click', (e) => {
