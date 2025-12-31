@@ -167,20 +167,23 @@ html, body {
   pointer-events: auto;
 }
 
+/*
 .menu-overlay.open .slide-menu {
   transform: translateX(0);
-}
+}*/
 
 .slide-menu {
-  position: fixed;
-  inset: 0;
-  background: #000;
+  position: absolute;
+  left: 32px;
+  bottom: 80px;
+
+  background: none;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-left: 48px;
-  transform: translateX(100%);
-  transition: transform 0.45s ease;
+
+  transform: none;
+  transition: none;
 }
 
 .slide-menu ul {
