@@ -61,7 +61,8 @@
 
   <!-- ===== Script ===== -->
 <script>
-  console.log('JS loaded');
+document.addEventListener('DOMContentLoaded', () => {
+
   const menuBtn = document.querySelector('.menu-toggle');
   const overlay = document.getElementById('menuOverlay');
   const closeBtn = document.getElementById('menuClose');
@@ -78,6 +79,8 @@
     if (e.target === overlay) {
       overlay.classList.remove('open');
     }
+  });
+
   });
 </script>
 
