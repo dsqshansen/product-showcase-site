@@ -61,27 +61,58 @@
 
   <!-- ===== Script ===== -->
 <script>
-document.addEventListener('DOMContentLoaded', () => {
+(() => {
+  // 等 DOM 一定加载完成
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMenu);
+  } else {
+    initMenu();
+  }
 
-  const menuBtn = document.querySelector('.menu-toggle');
-  const overlay = document.getElementById('menu-Overlay');
-  const closeBtn = document.getElementById('menu-Close');
+  function initMenu() {
+    const menuBtn  = document.querySelector('.menu-toggle');
+    const overlay  = document.getElementById('menuOverlay');
+    const closeBtn = document.getElementById('menuClose');
 
-  menuBtn.addEventListener('click', () => {
-    overlay.classList.add('open');
-  });
-
-  closeBtn.addEventListener('click', () => {
-    overlay.classList.remove('open');
-  });
-
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) {
-      overlay.classList.remove('open');
+    // 安全兜底：任何一个不存在就直接停止
+    if (!menuBtn || !overlay || !closeBtn) {
+      console.error('Menu init failed:', {
+        menuBtn,
+        overlay,
+        closeBtn
+      });
+      return;
     }
-  });
 
-  });
+    // 打开菜单
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      overlay.classList.add('open');
+    });
+
+    // 关闭按钮
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      overlay.classList.remove('open');
+    });
+
+    // 点黑色背景关闭（点菜单本体不关）
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        overlay.classList.remove('open');
+      }
+    });
+
+    // ESC 键关闭（桌面端）
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        overlay.classList.remove('open');
+      }
+    });
+
+    console.log('Menu script loaded ✔');
+  }
+})();
 </script>
 
 </body>
