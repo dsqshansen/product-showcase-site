@@ -242,6 +242,28 @@ html, body {
   pointer-events: auto;
 }
 
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* 半透明遮罩 */
+  z-index: 999;
+  display: none;
+}
+
+.menu-overlay.open {
+  display: block;
+}
+
+.menu-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  max-width: 360px;
+  height: 100vh;
+  background: #111; /* 实体黑色 */
+}
+
 /*
 .close-icon {
   width: 128px;
