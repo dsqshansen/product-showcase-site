@@ -245,7 +245,7 @@ html, body {
 .menu-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6); /* 半透明遮罩 */
+  background: rgba(0, 0, 0, 0); /* 半透明遮罩 */
   z-index: 999;
   display: none;
 }
@@ -264,23 +264,7 @@ html, body {
   background: #111; /* 实体黑色 */
 }
 
-.menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
 
-  background: rgba(0, 0, 0, 0.75);
-
-  z-index: 9999;
-
-  display: none;
-}
-
-.menu-overlay.open {
-  display: block;
-}
 /*
 .close-icon {
   width: 128px;
