@@ -60,23 +60,25 @@ html, body {
 }
 
 /* ===== Mobile Menu Overlay ===== */
-/*
+
 .menu-overlay {
   position: fixed;
   inset: 0;
 
-  background: rgba(0, 0, 0, 0.95);
+  /*background: rgba(0, 0, 0, 0.95);*/
+
+ background: rgba(255, 0, 0, 0.2);
 
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.35s ease;
 
   z-index: 2000;
-}*/
-
-.menu-overlay {
-  background: rgba(255, 0, 0, 0.2);
 }
+
+/*.menu-overlay {
+  background: rgba(255, 0, 0, 0.2);
+}*/
 
 .menu-overlay.open {
   opacity: 1;
