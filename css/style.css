@@ -90,6 +90,7 @@ pointer-events: auto !important;
 }
 
 .menu-overlay.open ~ .site-header {
+ opacity: 0;
   pointer-events: none;
 }
 
