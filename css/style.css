@@ -60,6 +60,7 @@ html, body {
 }
 
 /* ===== Mobile Menu Overlay ===== */
+/*
 .menu-overlay {
   position: fixed;
   inset: 0;
@@ -71,6 +72,10 @@ html, body {
   transition: opacity 0.35s ease;
 
   z-index: 2000;
+}*/
+
+.menu-overlay {
+  background: rgba(255, 0, 0, 0.2);
 }
 
 .menu-overlay.open {
