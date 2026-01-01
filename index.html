@@ -88,12 +88,17 @@
     menuBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       overlay.classList.add('open');
+document.body.classList.add('menu-open');
+      
     });
 
     // 关闭按钮
     closeBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       overlay.classList.remove('open');
+
+ document.body.classList.remove('menu-open');
+      
     });
 
     // 点黑色背景关闭（点菜单本体不关）
