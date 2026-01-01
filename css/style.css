@@ -14,6 +14,8 @@ html, body {
 
 /* ===== Header ===== */
 .site-header {
+pointer-events: auto !important;
+ 
   position: fixed;
   top: 0;
   width: 100%;
@@ -70,7 +72,8 @@ html, body {
  background: rgba(255, 0, 0, 0.2);
 
   opacity: 0;
-  pointer-events: none;
+  /*pointer-events: none;*/
+ pointer-events: auto;
   transition: opacity 0.35s ease;
 
   z-index: 2000;
