@@ -139,11 +139,11 @@ html, body {
 .hero {
   min-height: 100vh;
   padding-top: 160px;
-background: red !important;
-  /*background:
+/*background: red !important;*/
+  background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
     url("/hero.png") center / cover no-repeat;
-*/
+
   display: flex;
   align-items: center;
   padding-left: clamp(24px, 6vw, 80px);
