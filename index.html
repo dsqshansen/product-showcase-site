@@ -122,6 +122,24 @@
 })();
 </script>
   <!-- ===== Script ===== -->
+ <script>
+/* 地区菜单点击 → 滚动到页面对应区域 */
+document.querySelectorAll('[data-region]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const region = link.dataset.region;
+    const target = document.getElementById(region);
+
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+</script> 
       
 
 </body>
