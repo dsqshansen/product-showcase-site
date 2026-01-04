@@ -119,6 +119,25 @@
       document.body.classList.remove('menu-open');
     });
 
+    // 点击菜单里的地区 → 关闭菜单 + 滚动到对应区域
+document.querySelectorAll('.slide-menu a[data-region]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const regionId = link.dataset.region;
+    const section = document.getElementById(regionId);
+
+    if (!section) return;
+
+    // 关闭菜单
+    overlay.classList.remove('open');
+    document.body.classList.remove('menu-open');
+
+    // 滚动到对应地区
+    section.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
     // 点黑色背景关闭（点菜单本体不关）
     overlay.addEventListener('click', (e) => {
       if (e.target === overlay) {
